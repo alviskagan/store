@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %} - My Webpage</title>    
+    {% block head %}
+    <link rel="stylesheet" href="style.css" />
+    {% endblock %}
+</head>
+<body>
+    <div id="login">
+            <a href="http://127.0.0.1:8000/login/">
+                <button>Login</button>
+            </a> 
+        </div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="produk">
+        <table border="1">
+            <tr>
+                <td>
+                    Nama Produk
+                </td>
+                <td>
+                    Kategori
+                </td>
+                <td>
+                    Harga Produk
+                </td>
+                <td>
+                    Stok Produk
+                </td>
+            </tr>
+            {% for produk in data_produk %}
+                <tr>
+                    <td>
+                        {{ produk.nama_produk }}
+                    </td>
+                    <td>
+                        {{ produk.kategori_produk.nama_kategori }}
+                    </td>
+                    
+                    {% load humanize %}
+                    <td>    
+                       Rp. {{ produk.harga_produk|intcomma}}
+                    </td>
+                    <td align="center">
+                        {{ produk.stok_produk }}
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+    <div id="footer">
+        {% block footer %}
+        {% endblock %}
+        &copy; Copyright 2008 by <a href="http://domain.invalid/">you</a>.
+        
+    </div>
+</body>
+</html>

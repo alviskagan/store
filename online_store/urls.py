@@ -16,8 +16,15 @@ Including another URLconf
 #table of content dari website
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth import views as auth_views
+from store import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('store/', include('store.urls'))
+    #path('accounts/', include('django.contrib.auth.urls')),
+    path('', views.index, name = 'index'),
+    path('login/', auth_views.login, name='login'),
+    path('logout/', auth_views.logout, name='logout')
+    #url(r'^admin/', admin.site.urls),
+    #path('store/shop/', include('store.urls'))
 ]
