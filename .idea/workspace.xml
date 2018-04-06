@@ -3,45 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="536f05f0-d131-4792-b06d-30860ab3a50e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/online_store/settings.py" afterPath="$PROJECT_DIR$/online_store/settings.py" />
-      <change beforePath="$PROJECT_DIR$/online_store/urls.py" afterPath="$PROJECT_DIR$/online_store/urls.py" />
-      <change beforePath="$PROJECT_DIR$/store/admin.py" afterPath="$PROJECT_DIR$/store/admin.py" />
-      <change beforePath="$PROJECT_DIR$/store/models.py" afterPath="$PROJECT_DIR$/store/models.py" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/.travis.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/css/shop-homepage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/gulpfile.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/package-lock.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.bundle.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/bootstrap/js/bootstrap.min.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/jquery/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/jquery/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/jquery/jquery.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/jquery/jquery.slim.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/jquery/jquery.slim.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/templates/shop/vendor/jquery/jquery.slim.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/store/test_case.py" afterPath="$PROJECT_DIR$/store/test_case.py" />
-      <change beforePath="$PROJECT_DIR$/store/urls.py" afterPath="$PROJECT_DIR$/store/urls.py" />
-      <change beforePath="$PROJECT_DIR$/store/views.py" afterPath="$PROJECT_DIR$/store/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -413,7 +374,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -422,7 +382,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271605" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3425926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
