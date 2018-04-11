@@ -12,4 +12,11 @@ def index(request):
     produk = {
         "data_produk": all_produks
     }
-    return render(request, 'index.html', produk)
+    return render(request, 'store/index.html', produk)
+
+# def produk(request):
+#     all_produks = Produk.objects.all().select_related('kategori_produk').order_by('kategori_produk')
+#     produk = {
+#         "data_produk": all_produks
+#     }
+#     return render(request, 'store/produk.html', produk)
