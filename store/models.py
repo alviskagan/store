@@ -1,9 +1,9 @@
-import uuid
+import uuid, os, time
 
 from django.db import models
 from djmoney.models.fields import MoneyField
+from django.utils.deconstruct import deconstructible
 import locale
-
 
 # Create your models here.
 class Pelanggan(models.Model):
@@ -49,10 +49,18 @@ class Produk(models.Model):
         on_delete = models.CASCADE,
         related_name= 'kategori'
     )
-    stok_produk = models.IntegerField(max_length = 250)
+    stok_produk = models.IntegerField()
     #harga_produk = MoneyField(max_digits=10, decimal_places = 2, default_currency='IDR')
-    harga_produk = models.IntegerField(max_length = 250)
-    rating_produk = models.IntegerField(max_length = 250)        
+    harga_produk = models.IntegerField()
+    rating_produk = models.IntegerField() 
+
+    def content_file_name(instance, filename):
+        ext = filename.split('.')[-1]
+        filename = "%s_%s_%s.%s" % (instance.id_produk, instance.kategori_produk, instance.nama_produk, ext)
+        return os.path.join('foto', filename)   
+        
+    foto_produk = models.FileField(upload_to= content_file_name ,null = True, blank = True)
+
 
     def __str__(self):
         return self.nama_produk

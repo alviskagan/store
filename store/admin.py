@@ -3,7 +3,7 @@ from .models import Produk, Kategori, Pelanggan
 
 # Class model in admin 
 class ProdukAdmin(admin.ModelAdmin):
-    list_display = ('id_produk','nama_produk','kategori_produk','stok_produk','harga_produk','rating_produk')
+    list_display = ('id_produk','nama_produk','kategori_produk','stok_produk','foto_produk','harga_produk','rating_produk')
 class KategoriAdmin(admin.ModelAdmin):
     list_display = ('id_kategori', 'nama_kategori')
 class PelangganAdmin(admin.ModelAdmin):

@@ -9,9 +9,13 @@ locale.setlocale(locale.LC_ALL, '')
 def index(request):
     #select_related digunakan untuk memanggil foreign key
     all_produks = Produk.objects.all().select_related('kategori_produk').order_by('kategori_produk')
+    all_kategori = Kategori.objects.all()
+    
     produk = {
-        "data_produk": all_produks
+        "data_produk": all_produks,
+        "kategori_produk": all_kategori
     }
+    
     return render(request, 'store/index.html', produk)
 
 # def produk(request):
