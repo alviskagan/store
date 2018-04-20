@@ -1,35 +1,24 @@
 import uuid, os, time
 
 from django.db import models
-from djmoney.models.fields import MoneyField
+#from djmoney.models.fields import MoneyField
 from django.utils.deconstruct import deconstructible
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 import locale
 
 # Create your models here.
 class Pelanggan(models.Model):
+    pelanggan = models.OneToOneField(User, on_delete= models.CASCADE, null = True)
     id_pelanggan = models.AutoField(primary_key = True)
-    username_pelanggan = models.CharField(max_length = 250)
-    password_pelanggan = models.CharField(max_length = 250)
-    nama_pelanggan = models.CharField(max_length = 250, default = "Alviska Galuh")
-    email = models.EmailField(max_length=70,blank=True, null= True, unique= True)
-    alamat_pelanggan = models.CharField(max_length = 250, default = "Yogyakarta")
-    no_hp = models.IntegerField(default="082")
-'''
-    def save(self, *args, **kwargs):
-        # ... other things not important here
-        self.email = self.email.lower().strip() # Hopefully reduces junk to ""
-        if self.email != "": # If it's not blank
-            if not email_re.match(self.email) # If it's not an email address
-                raise ValidationError(u'%s is not an email address, dummy!' % self.email)
-        if self.email == "":
-            self.email = None
-        super(Pelanggan, self.email).save(*args, **kwargs)
-
+    tanggal_lahir = models.DateField(null = True, blank = True)
+    alamat_pelanggan = models.CharField(max_length = 250, blank = True)
+    no_hp = models.CharField(max_length= 30, blank = True)
     def __str__(self):
-         return self.nama_pelanggan
-    # class Meta:
-    #     ordering = ('id_keranjang',)
-'''
+        return self.pelanggan.username
+        
 class Detail_rekomendasi (models.Model):
     id_detail_rekomendasi = models.AutoField(primary_key= True)
     hasil_rekomendasi = models.FloatField(max_length= 250)
@@ -50,10 +39,10 @@ class Produk(models.Model):
         related_name= 'kategori'
     )
     stok_produk = models.IntegerField()
-    #harga_produk = MoneyField(max_digits=10, decimal_places = 2, default_currency='IDR')
     harga_produk = models.IntegerField()
     rating_produk = models.IntegerField() 
 
+    #Untuk mengubah nama file yang diupload lalu disimpan ke dalam folder foto 
     def content_file_name(instance, filename):
         ext = filename.split('.')[-1]
         filename = "%s_%s_%s.%s" % (instance.id_produk, instance.kategori_produk, instance.nama_produk, ext)
@@ -70,7 +59,7 @@ class Keranjang_pembelian(models.Model):
     id_pelanggan = models.ForeignKey (
         Pelanggan,
         null = False,
-        related_name='pelanggan',
+        related_name='keranjang_pelanggan',
         on_delete=models.CASCADE
     )
     id_produk = models.ForeignKey(
@@ -112,3 +101,9 @@ class Rekomendasi (models.Model):
     )
     id_detail_rekomendasi = models.FloatField(max_length= 250)
 
+
+@receiver(post_save, sender=User)
+def create_or_update_user_pelanggan(sender, instance, created, **kwargs):
+    if created:
+        Pelanggan.objects.create(pelanggan=instance)
+    instance.pelanggan.save()
